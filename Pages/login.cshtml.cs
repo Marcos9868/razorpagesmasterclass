@@ -1,9 +1,10 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Pages
 {
-  public class Index : PageModel
-  {
+  public class Login : PageModel
+  { 
     public void OnGet()
     {
 
