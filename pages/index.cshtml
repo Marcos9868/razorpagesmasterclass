@@ -13,9 +13,34 @@
   <title>Razor Page Masterclass</title>
 </head>
 <body>
-  @for (var i = 0; i <= 10; i++)
-  {
-    <p>Item @i</p>
-  }
+  <ul>
+    <li>
+      <a href="~/">Home</a>
+    </li>
+    <li>
+      <a href="~/About">About</a>
+    </li>
+    <li>
+      <a href="~/Login">Login</a>
+    </li>
+  </ul>
+  <h1>Categories</h1>
+  <table>
+    <thead>
+      <tr>ID</tr>
+      <tr>Title</tr>
+      <tr>Price</tr>
+    </thead>
+    <tbody>
+      @foreach (var category in Model.Categories)
+      {
+        <tr>
+          <td>@category.Id</td>
+          <td>@category.Title</td>
+          <td>@category.Price.ToString("C")</td>
+        </tr>
+      }
+    </tbody>
+  </table>
 </body>
 </html>
